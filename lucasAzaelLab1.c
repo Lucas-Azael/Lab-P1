@@ -10,6 +10,7 @@ int main() {
     printf("Digite 4 para as dobrar\n");
     printf("Digite 5 para sair do programa\n");
     scanf("%d", &i);
+    putchar('\n');
 
     if(i==1){
         printf("++++++++++++++++++++++++\n");
@@ -19,7 +20,7 @@ int main() {
         int atual = 1;
         int prox;
         int n, i;
-        printf("Digite a quantidade de termos\n");
+        printf("Digite o termo\n");
         scanf("%d", &n);
         while(n>atual){
             prox = ant + atual;
@@ -30,6 +31,50 @@ int main() {
             printf("Voltando para o menu\n");
             putchar('\n');
         }
-    }
+
+        if(i==2){
+            int n;
+            printf("Digite um numero\n");
+            scanf("%d", &n);
+            while(n>1){
+                if(n%2==0){
+                    n = n/2;
+                }else {
+                    n = 3 * n + 1;
+                }
+                printf("%d ", n);
+            }
+            putchar('\n');
+            printf("Voltando ao menu\n");
+            putchar('\n');
+        }
+
+        if(i==3){
+            int a,b;
+            char c;
+            printf("Digite no teclado a operacao matematica desejada e os dois numeros\n");
+            scanf("%d %c %d",&a,&c,&b);
+            if(c == '+'){
+                printf("%d + %d = %d",a,b,a+b);
+            }else {
+                if(c == '*'){
+                    printf("%d * %d = %d",a,b,a*b);
+                }else{
+                    if(c == '/'){
+                        printf("%d / %d = %d",a,b,a/b);
+                    }else{
+                        if(c == '-'){
+                            printf("%d - %d = %d",a,b,a-b);
+                        }else{
+                            printf("Operacao invalida\n");
+                        }
+                    }
+                }
+            }
+            putchar('\n');
+            printf("Voltando ao menu\n");
+            putchar('\n');
+      }
+    } 
     return 0;
 }
