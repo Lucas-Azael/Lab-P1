@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 
 int main() {
@@ -11,11 +13,18 @@ int main() {
     printf("Digite 4 para as dobrar\n");
     printf("Digite 5 para sair do programa\n");
     scanf("%d", &i);
+    
+    if(i>5){
+        printf("Numero invalido\n");
+        i=0;
+    }
+    sleep(2);
+    system("clear");
     putchar('\n');
 
     if(i==1){
         printf("++++++++++++++++++++++++\n");
-        printf("       FIBONACCI         \n");
+        printf("       FIBONACCI        \n");
         printf("++++++++++++++++++++++++\n");
         int ant = 0;
         int atual = 1;
@@ -29,11 +38,16 @@ int main() {
             atual = prox;
             printf("%d ",atual);
             }
-            printf("Voltando para o menu\n");
             putchar('\n');
+            printf("Voltando para o menu\n");
+            sleep(2);
+            system("clear");
         }
 
         if(i==2){
+            printf("++++++++++++++++++++++++\n");
+            printf("  Sequencia de numeros  \n");
+            printf("++++++++++++++++++++++++\n");
             int n;
             printf("Digite um numero\n");
             scanf("%d", &n);
@@ -46,11 +60,15 @@ int main() {
                 printf("%d ", n);
             }
             putchar('\n');
-            printf("Voltando ao menu\n");
-            putchar('\n');
+            printf("Voltando para o menu\n");
+            sleep(2);
+            system("clear");
         }
 
         if(i==3){
+            printf("+++++++++++++++++++++++++++++++++++++\n");
+            printf("       Operacoes aritimeticas        \n");
+            printf("+++++++++++++++++++++++++++++++++++++\n");
             int a,b;
             char c;
             printf("Digite no teclado a operacao matematica desejada e os dois numeros\n");
@@ -73,11 +91,15 @@ int main() {
                 }
             }
             putchar('\n');
-            printf("Voltando ao menu\n");
-            putchar('\n');
+            printf("Voltando para o menu\n");
+            sleep(2);
+            system("clear");
       }
 
       if(i==4){
+          printf("+++++++++++++++++++++++++++++++++++++\n");
+          printf("       Quantidade de dobras          \n");
+          printf("+++++++++++++++++++++++++++++++++++++\n");
           int resul = 0;
           int n;
           int i;
@@ -88,8 +110,14 @@ int main() {
           }
           printf("Quantidade de dobras: %d\n", resul);
       }
+            putchar('\n');
+            printf("Voltando para o menu\n");
+            sleep(2);
+            system("clear");
     }
     putchar('\n');
     printf("Fim do programa\n"); 
+    sleep(2);
+    system("clear");
     return 0;
 }
