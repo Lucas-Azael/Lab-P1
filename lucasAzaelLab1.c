@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
+
 
 int main() {
     int i; 
@@ -75,6 +76,20 @@ int main() {
             printf("Voltando ao menu\n");
             putchar('\n');
       }
-    } 
+
+      if(i==4){
+          int resul = 0;
+          int n;
+          int i;
+          printf("Digite a quantidade de dobras\n");
+          scanf("%d", &n);
+          for(i=0;i<=n;i++){
+              resul+= (1+2) + pow(2,i);
+          }
+          printf("Quantidade de dobras: %d\n", resul);
+      }
+    }
+    putchar('\n');
+    printf("Fim do programa\n"); 
     return 0;
 }
