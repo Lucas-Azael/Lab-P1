@@ -27,13 +27,13 @@ char *alunoSituacao(char nome[16]) {
 void nomesAlunos(char n[][2][16]) {
     int i, j;
     char *nome;
-    char situ[10];
+    char *situ;
     for(i=0; i<5;i++){
         for(j=0;j<1;j++){
             printf("NOME: ");
             fgets(n[i][j],16,stdin);
             nome = n[i][j];
-            situ[10] = alunoSituacao(nome);
+            situ = *alunoSituacao(nome); //criar ponteiro para receber o retorno
             j++;
             setbuf(stdin,NULL);   
                 }
